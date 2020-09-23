@@ -3,6 +3,7 @@
 namespace Optimus\Heimdal;
 
 use Exception;
+use Throwable;
 use ReflectionClass;
 use InvalidArgumentException;
 use Asm89\Stack\CorsService;
@@ -40,7 +41,7 @@ class ExceptionHandler extends LaravelExceptionHandler
      * @throws Exception
      * @returns void
      */
-    public function report(Exception $e)
+    public function report(Throwable $e)
     {
         parent::report($e);
 
